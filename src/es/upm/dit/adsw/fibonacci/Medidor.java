@@ -9,17 +9,20 @@ public class Medidor {
 
     public static void main(String[] args) {
 
-        /**
+        /*
          * Valores de prueba para el cálcuo
          */
         int[] N = {50,                //precalentamiento
                 10, 20, 30, 40, 50};
 
-        /**
+        /*
          * Número de veces que se ejecuta el método de cálculo
          */
         int max = 1000;
 
+        /*
+         * Cambiar según la versión que se quiera medir.
+         */
         Fibonacci F = new FibonacciIterativo();
 
         for (int n : N) {
