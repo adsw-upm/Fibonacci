@@ -1,16 +1,13 @@
 package es.upm.dit.adsw.fibonacci;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Cálculo recursivo de la sucesión de Fibonacci con memoria
  * <p>
  * Created by jpuente on 19/12/16.
  */
-public class FibonacciRecursivoConMemoria implements Fibonacci {
+public class FibonacciRecursivoConMemoriaLimitada implements Fibonacci {
 
-    private Map<Integer, Integer> memoria = new HashMap<>();
+    private int[] tabla = new int[20];
 
     /**
      * Calcular un término de la sucesión de Fibonacci
@@ -28,11 +25,15 @@ public class FibonacciRecursivoConMemoria implements Fibonacci {
         if (n == 1)
             return 1;
         assert n > 1;
-        Integer resultado = memoria.get(n);
-        if (resultado != null)
+        if (n < tabla.length) {
+            int resultado = tabla[n];
+            if (resultado > 0)
+                return resultado;
+            resultado = fibonacci(n - 1) + fibonacci(n - 2);
+            tabla[n] = resultado;
             return resultado;
-        resultado = fibonacci(n - 1) + fibonacci(n - 2);
-        memoria.put(n, resultado);
-        return resultado;
+        }
+        assert n >= tabla.length;
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }

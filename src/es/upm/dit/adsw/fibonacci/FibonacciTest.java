@@ -16,8 +16,9 @@ public class FibonacciTest {
     public void setUp() throws Exception {
 //        F = new FibonacciRecursivo();
 //        F = new FibonacciRecursivoConMemoria();
+        F = new FibonacciRecursivoConMemoriaLimitada();
 //        F = new FibonacciIterativo();
-        F = new FibonacciBinet();
+//        F = new FibonacciBinet();
     }
 
     /**
