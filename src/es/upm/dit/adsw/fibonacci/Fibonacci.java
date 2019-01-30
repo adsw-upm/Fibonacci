@@ -1,7 +1,7 @@
 package es.upm.dit.adsw.fibonacci;
 
 /**
- *  Interfaz genérica para calcular el n-ésimo término de la sucesión de es.upm.dit.adsw.fibonacci.Fibonacci
+ * Interfaz genérica para calcular el n-ésimo término de la sucesión de es.upm.dit.adsw.fibonacci.Fibonacci
 
  * Created by jpuente on 19/12/16.
  */

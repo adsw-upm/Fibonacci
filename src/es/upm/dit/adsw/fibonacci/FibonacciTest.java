@@ -14,9 +14,9 @@ public class FibonacciTest {
 
     @Before
     public void setUp() throws Exception {
-//        F = new FibonacciRecursivo();
+        F = new FibonacciRecursivo();
 //        F = new FibonacciRecursivoConMemoria();
-        F = new FibonacciRecursivoConMemoriaLimitada();
+//        F = new FibonacciRecursivoConMemoriaLimitada();
 //        F = new FibonacciIterativo();
 //        F = new FibonacciBinet();
     }
@@ -75,7 +75,8 @@ public class FibonacciTest {
     @Test(expected = IllegalArgumentException.class)
     public void test11() {
         F.fibonacci(-1);
-        fail("Debería haber saltado una excepción - no se puede calcular el factorial de un número negativo");
+        fail("Debería haber saltado una excepción "
+                + "- no se puede calcular el término de la sucesión de  Fibonacci con un índice negativo");
     }
 
 }
